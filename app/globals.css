@@ -1,33 +1,39 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap'); */
+
+
 @tailwind base;
+
+@font-face {
+  font-family: 'valencia';
+  src: url(/public/font/valencia.ttf) format("ttf");
+}
+
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+.scrolled-x-title{
+  font-size: 13rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.scroll-regular{
+  animation-timeline: view();
+  animation-range: entry 0% exit 350%;
+
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.scroll-fast{
+  animation-timeline: view();
+  animation-range: entry 0% exit 240%;
+
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.scroll-title{
+  animation-timeline: view();
+  animation-range: entry 0% exit 90%;
+}
+
+.scroll-app-phone-description{
+  animation-timeline: view();
+  animation-range: entry 0% exit 40%;
 }

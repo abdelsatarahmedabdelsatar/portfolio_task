@@ -8,11 +8,115 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily:
+      {
+        valencia: "valencia",
+      },
+
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      keyframes: {
+        scrollingAnimation: {
+          from: {
+            transform: "translateY(calc(-200px))"
+          },
+          to: {
+            transform: "translateY(calc(400px))"
+          }
+        },
+        scrollingAnimationFast: {
+          from: {
+            transform: "translateY(calc(100px))"
+          },
+          to: {
+            transform: "translateY(calc(900px))"
+          }
+        },
+        titleDivAnimation: {
+          from: {
+            top: '20rem',
+            height: "22rem"
+          },
+          to: {
+            top: "100%",
+            height: "0vh"
+          }
+        },
+        titleAnimation: {
+          from: {
+            top: '100px',
+          },
+          to: {
+            top: "0px",
+          }
+        },
+        sectionRightAnimation: {
+          from: {
+            transform: 'translateX(-200px)',
+          },
+          to: {
+            transform: "translateX(calc(400px))",
+          }
+        },
+        sectionLeftAnimation: {
+          from: {
+            transform: 'translateX(calc(900px))',
+          },
+          to: {
+            transform: "translateX(calc(100px))",
+          }
+        },
+        appDataAnimation:{
+         '0%': {
+          opacity:"0"
+          },
+          '90%': {
+             opacity:"0.1"
+          },
+          '100%': {
+            opacity:"1"
+         }
+        },
+       appDataDivAnimation: {
+
+          '0%': {
+            transform: "scaleX(0.9)",
+            transformOrigin: '0%'
+          },
+          '50%': {
+            transform: "scaleX(1)",
+            transformOrigin: '0%'
+
+          },
+          '70%': {
+            transform: "scaleX(1)",
+            transformOrigin: '100%'
+
+          },
+          '100%': {
+            transform: "scaleX(0)",
+            transformOrigin: '100%'
+          }
+        }
+
+
+      },
+      animation: {
+        scrollRegular: "scrollingAnimation linear",
+        scrollFast: "scrollingAnimationFast ease-in",
+        divTitle: "titleDivAnimation 2s linear 1s 1 normal forwards",
+        nameTitle: "titleAnimation 1s ease 1s 1 normal forwards",
+        jobTitle: "titleAnimation 1.3s ease 1.2s 1 normal forwards",
+        rightAnimation: "sectionRightAnimation linear",
+        leftAnimation: "sectionLeftAnimation linear",
+        appDiv:"appDataDivAnimation 0.8s ease-in-out forwards",
+        appData:"appDataAnimation 0.5s ease forwards",
+      }
+
+
     },
   },
   plugins: [],
