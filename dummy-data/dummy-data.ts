@@ -40,7 +40,7 @@ export const phoneDataList = [
         src: '7.png',
         width: 300,
         height: 300,
-        isFast: true
+        isFast: false
     },
     {
         src: '8.png',
@@ -74,9 +74,9 @@ export const phoneDataList = [
     },
     {
         src: '13.png',
-        width: 295,
+        width: 215,
         height: 300,
-        isFast: false
+        isFast: true
     },
     {
         src: '15.png',
@@ -94,7 +94,7 @@ export const phoneDataList = [
         src: '16.png',
         width: 250,
         height: 300,
-        isFast: true
+        isFast: false
     },
 
     {

@@ -14,9 +14,9 @@ export default function AppDescriptionSection() {
 
 
     function AppDescriptionItemRendered() {
-        useScrollPosition(({currPos }) => {
 
-            console.log(currPos.y);
+        
+        useScrollPosition(({currPos }) => {
             let currentPosition = Math.abs(currPos.y)
             ;
             if (currentPosition > 1000 && currentPosition < 2800) {

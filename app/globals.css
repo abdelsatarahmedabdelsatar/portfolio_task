@@ -2,14 +2,13 @@
 
 
 @tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 @font-face {
   font-family: 'valencia';
-  src: url(/public/font/valencia.ttf) format("ttf");
+  src: url(/font/valencia.ttf) format("ttf");
 }
-
-@tailwind components;
-@tailwind utilities;
 
 
 .scrolled-x-title{

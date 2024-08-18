@@ -20,20 +20,23 @@ const config: Config = {
       },
       keyframes: {
         scrollingAnimation: {
-          from: {
-            transform: "translateY(calc(-200px))"
-          },
-          to: {
-            transform: "translateY(calc(400px))"
-          }
+          // from: {
+          //   transform: "translateY(0px)"
+          // },
+          // to: {
+          //   transform: "translateY(400px)"
+          // }
+
+          ' 0%': { transform: "translateY(0px)" },
+          '50%': { transform: "translateY(calc(-100% + 101px))" },
+          '100%': { transform: "translateY(0px)" }
+
+
         },
         scrollingAnimationFast: {
-          from: {
-            transform: "translateY(calc(100px))"
-          },
-          to: {
-            transform: "translateY(calc(900px))"
-          }
+          ' 0%': { transform: "translateY(0px)" },
+          '50%': { transform: "translateY(calc(101px))" },
+          '100%': { transform: "translateY(0px)" }
         },
         titleDivAnimation: {
           from: {
@@ -58,29 +61,29 @@ const config: Config = {
             transform: 'translateX(-200px)',
           },
           to: {
-            transform: "translateX(calc(400px))",
+            transform: "translateX(400px)",
           }
         },
         sectionLeftAnimation: {
           from: {
-            transform: 'translateX(calc(900px))',
+            transform: 'translateX(900px)',
           },
           to: {
-            transform: "translateX(calc(100px))",
+            transform: "translateX(100px)",
           }
         },
-        appDataAnimation:{
-         '0%': {
-          opacity:"0"
+        appDataAnimation: {
+          '0%': {
+            opacity: "0"
           },
           '90%': {
-             opacity:"0"
+            opacity: "0"
           },
           '100%': {
-            opacity:"1"
-         }
+            opacity: "1"
+          }
         },
-       appDataDivAnimation: {
+        appDataDivAnimation: {
 
           '0%': {
             transform: "scaleX(0.2)",
@@ -112,8 +115,8 @@ const config: Config = {
         jobTitle: "titleAnimation 1.3s ease 1.2s 1 normal forwards",
         rightAnimation: "sectionRightAnimation linear",
         leftAnimation: "sectionLeftAnimation linear",
-        appDiv:"appDataDivAnimation 0.6s ease forwards",
-        appData:"appDataAnimation 0.5s ease forwards",
+        appDiv: "appDataDivAnimation 0.6s ease forwards",
+        appData: "appDataAnimation 0.5s ease forwards",
       }
 
 
