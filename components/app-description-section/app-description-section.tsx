@@ -10,7 +10,7 @@ import { phonesApps } from "@/dummy-data/dummy-data";
 
 export default function AppDescriptionSection() {
 
-    const [AppDecriptionItemIndex, setAppDecriptionItemIndex] = useState(0);
+    const [AppDecriptionItemIndex, setAppDecriptionItemIndex] = useState(-1);
 
 
     function AppDescriptionItemRendered() {
@@ -19,7 +19,7 @@ export default function AppDescriptionSection() {
             console.log(currPos.y);
             let currentPosition = Math.abs(currPos.y)
             ;
-            if (currentPosition > 2500 && currentPosition < 2800) {
+            if (currentPosition > 1000 && currentPosition < 2800) {
                 setAppDecriptionItemIndex(0);
             } else if (currentPosition > 2800 && currentPosition < 4000) {
                 setAppDecriptionItemIndex(1);
@@ -35,12 +35,14 @@ export default function AppDescriptionSection() {
             }
             else if (currentPosition > 7600 && currentPosition < 8800) {
                 setAppDecriptionItemIndex(5);
+            }else{
+                setAppDecriptionItemIndex(-1);
             }
         });
 
         return useMemo(
             () => (
-              <> {AppDecriptionItemIndex >= 0 &&  <AppDescriptionItem appData={phonesApps[AppDecriptionItemIndex]} />} </>
+              <> {AppDecriptionItemIndex >= 0 ?  <AppDescriptionItem appData={phonesApps[AppDecriptionItemIndex]} /> : ""} </>
             ),
             [AppDecriptionItemIndex]
         );

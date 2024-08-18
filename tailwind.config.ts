@@ -74,7 +74,7 @@ const config: Config = {
           opacity:"0"
           },
           '90%': {
-             opacity:"0.1"
+             opacity:"0"
           },
           '100%': {
             opacity:"1"
@@ -83,7 +83,7 @@ const config: Config = {
        appDataDivAnimation: {
 
           '0%': {
-            transform: "scaleX(0.9)",
+            transform: "scaleX(0.2)",
             transformOrigin: '0%'
           },
           '50%': {
@@ -112,7 +112,7 @@ const config: Config = {
         jobTitle: "titleAnimation 1.3s ease 1.2s 1 normal forwards",
         rightAnimation: "sectionRightAnimation linear",
         leftAnimation: "sectionLeftAnimation linear",
-        appDiv:"appDataDivAnimation 0.8s ease-in-out forwards",
+        appDiv:"appDataDivAnimation 0.6s ease forwards",
         appData:"appDataAnimation 0.5s ease forwards",
       }
 
